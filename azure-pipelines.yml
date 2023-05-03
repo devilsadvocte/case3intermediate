@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- script: dotnet --version
+  displayName: find docker version
+
 - script: docker build -f Humongous.Healthcare/Dockerfile -t api .
   displayName: 'Build container image'
 
