@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: docker build -t api .
+  displayName: 'Build container image'
+
+- script: docker tag api case3rgacrcase3.azurecr.io/humongous-healthcare-api:0.0.0
+  displayName: 'Tag the image'
+  
+- script: docker push case3rgacrcase3.azure.io/humongous-healthcare-api:0.0.0
+  displayName: 'Push the image'
+
