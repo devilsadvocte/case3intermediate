@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker build -t api -f Humongous.Healthcare/Dockerfile.
+- script: docker build -t api -f PATH/Humongous.Healthcare/Dockerfile.
   displayName: 'Build container image'
 
 - script: docker tag api case3rgacrcase3.azurecr.io/humongous-healthcare-api:0.0.0
