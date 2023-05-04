@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
 # Copy project file
-COPY . /Humongous.Healthcare.csproj .
+COPY . Humongous.Healthcare.csproj .
 # Restore as distinct layer
 RUN dotnet restore
 
