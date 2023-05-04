@@ -3,10 +3,7 @@ name: API - AKS - Build and deploy
 on:
   push:
     branches:
-    - main
-    paths:
-    - Humongous.Healthcare/**
-    - manifests/**
+      - main
 
 jobs:
   build-and-deploy:
